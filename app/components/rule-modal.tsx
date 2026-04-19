@@ -19,14 +19,14 @@ const RuleModal = ({ onClose }: RuleModalProps) => {
       >
         <div className="absolute inset-0 bg-black/70" />
         <motion.div
-          className="relative z-10 flex flex-col items-center w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_rule-bg.webp')]"
+          className="relative z-10 flex flex-col items-center w-full md:w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_rule-bg.webp')]"
           initial={{ scale: 0.7, opacity: 0, y: 40 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.7, opacity: 0, y: 40 }}
           transition={{ type: "spring", stiffness: 300, damping: 22 }}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="mt-[30%] w-[44.22%] aspect-352/477 flex flex-col overflow-y-auto text-[1vw]">
+          <div className="mt-[30%] w-[44.22%] aspect-352/477 flex flex-col overflow-y-auto text-[2.2vw] md:text-[1vw]">
             <p className="text-[#1D5B74] font-semibold text-center leading-relaxed px-[4%]">
               Thiếu hiệp thân mến, để nhận được lượt quay Thiếu hiệp{" "}
               <br />

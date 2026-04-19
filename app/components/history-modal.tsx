@@ -51,7 +51,7 @@ const HistoryModal = ({ type, onClose }: HistoryTypeModalProps) => {
       >
         <div className="absolute inset-0 bg-black/70" />
         <motion.div
-          className="relative z-10 flex flex-col items-center w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_history-checkin-bg.webp')]"
+          className="relative z-10 flex flex-col items-center w-full md:w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_history-checkin-bg.webp')]"
           initial={{ scale: 0.7, opacity: 0, y: 40 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -62,7 +62,7 @@ const HistoryModal = ({ type, onClose }: HistoryTypeModalProps) => {
             {/* Tabs */}
             <div className="flex shrink-0">
               <button
-                className={`flex-1 py-[2%] text-[1vw] font-bold leading-tight transition-colors ${
+                className={`flex-1 py-[2%] text-[2.4vw] md:text-[1vw] font-bold leading-tight transition-colors ${
                   activeTab === "checkin"
                     ? "bg-[#D85C07] text-[#FAECE7] font-bold"
                     : "bg-[#5D8899] text-white"
@@ -72,7 +72,7 @@ const HistoryModal = ({ type, onClose }: HistoryTypeModalProps) => {
                 Lịch sử điểm danh
               </button>
               <button
-                className={`flex-1 py-[2%] text-[1vw] font-bold leading-tight transition-colors ${
+                className={`flex-1 py-[2%] text-[2.4vw] md:text-[1vw] font-bold leading-tight transition-colors ${
                   activeTab === "spin"
                     ? "bg-[#D85C07] text-[#FAECE7] font-bold"
                     : "bg-[#5D8899] text-white"
@@ -87,16 +87,16 @@ const HistoryModal = ({ type, onClose }: HistoryTypeModalProps) => {
               <>
                 {/* Table header */}
                 <div className="mt-[3%] flex shrink-0 border border-[#1D5B74] bg-[#5D8898]">
-                  <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Thời gian</div>
-                  <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white">Ghi chú</div>
+                  <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Thời gian</div>
+                  <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white">Ghi chú</div>
                 </div>
 
                 {/* Scrollable rows */}
                 <div className="flex-1 min-h-0 overflow-y-auto ">
                   {MOCK_CHECKIN.map((row, i) => (
                     <div key={i} className="flex border-b border-x border-[#1D5B74] bg-white">
-                      <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black border-r border-[#1D5B74]">{row.date}</div>
-                      <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black">{row.note}</div>
+                      <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black border-r border-[#1D5B74]">{row.date}</div>
+                      <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black">{row.note}</div>
                     </div>
                   ))}
                 </div>
@@ -107,18 +107,18 @@ const HistoryModal = ({ type, onClose }: HistoryTypeModalProps) => {
               <>
                 {/* Table header */}
                 <div className="mt-[3%] flex shrink-0 border border-[#1D5B74] bg-[#5D8898]">
-                  <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Thời gian</div>
-                  <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Phần thưởng</div>
-                  <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white">Ghi chú</div>
+                  <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Thời gian</div>
+                  <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Phần thưởng</div>
+                  <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white">Ghi chú</div>
                 </div>
 
                 {/* Scrollable rows */}
                 <div className="flex-1 min-h-0 overflow-y-auto">
                   {MOCK_SPIN.map((row, i) => (
                     <div key={i} className="flex border-b border-x border-[#1D5B74] bg-white">
-                      <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black border-r border-[#1D5B74]">{row.date}</div>
-                      <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black border-r border-[#1D5B74]">{row.reward}</div>
-                      <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black">{row.note}</div>
+                      <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black border-r border-[#1D5B74]">{row.date}</div>
+                      <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black border-r border-[#1D5B74]">{row.reward}</div>
+                      <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black">{row.note}</div>
                     </div>
                   ))}
                 </div>

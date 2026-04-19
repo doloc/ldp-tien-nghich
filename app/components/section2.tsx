@@ -59,22 +59,22 @@ const Section2 = () => {
   };
 
   return (
-    <section className="relative w-full aspect-750/1334 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat overflow-hidden
+    <section className="relative w-full aspect-768/780 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat overflow-hidden
     bg-[url('/images/section2_mb-bg.webp')] md:bg-[url('/images/section2_pc-bg.webp')] flex flex-col items-center">
-      <img src="/images/section2_title.webp" alt="" className="w-[64.43%] object-contain" />
-      <div className="-mt-[5.5%] w-[28.96%] flex justify-between">
+      <img src="/images/section2_pc-title.webp" alt="" className="hidden md:block w-[64.43%] object-contain" />
+      <img src="/images/section2_mb-title.webp" alt="" className="md:hidden w-full object-contain" />
+      <div className="-mt-[11.5%] md:-mt-[5.5%] w-[46.22%] md:w-[28.96%] flex justify-between">
         <img src="/images/section2_btn-history.webp" alt="" className="w-[28.23%] object-contain img-btn" onClick={() => setShowHistoryModal(true)} />
         <img src="/images/section2_btn-receive-ticket.webp" alt="" className="w-[38.67%] object-contain img-btn" onClick={() => setShowReceiveModal(true)} />
         <img src="/images/section2_btn-rule.webp" alt="" className="w-[28.24%] object-contain img-btn" onClick={() => setShowRuleModal(true)} />
       </div>
-      <div className="mt-[1%] w-[19.22%] aspect-369/41 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_sub-text.webp')] flex items-center justify-center">
-        {/* font-ftv-clearface */}
-        <p className="text-center text-white text-[0.8vw] font-bold">Xin chào, Đại Hiệp đang có <span className="text-yellow-500">XXX</span> lượt quay</p> 
+      <div className="mt-[1%] w-[53.26%] md:w-[19.22%] aspect-369/41 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_sub-text.webp')] flex items-center justify-center">
+        <p className="text-center text-white text-[2vw] md:text-[0.8vw] font-bold">Xin chào, Đại Hiệp đang có <span className="text-yellow-500">XXX</span> lượt quay</p> 
       </div>
       <motion.img
         src="/images/section2_tru-1.webp"
         alt=""
-        className="z-10 absolute w-[37.19%] -bottom-[5%] left-[19%] object-contain"
+        className="hidden md:block z-10 absolute w-[37.19%] -bottom-[5%] left-[19%] object-contain"
         initial={{ opacity: 0, filter: "blur(12px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 1.2, ease: "easeOut" }}
@@ -82,16 +82,16 @@ const Section2 = () => {
       <motion.img
         src="/images/section2_tru-2.webp"
         alt=""
-        className="z-10 absolute w-[37.19%] -bottom-[5%] right-[19%] object-contain"
+        className="hidden md:block z-10 absolute w-[37.19%] -bottom-[5%] right-[19%] object-contain"
         initial={{ opacity: 0, filter: "blur(12px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
       />
       <img src="/images/section2_pc-effect.webp" alt="" className="pointer-events-none z-20 absolute w-full bottom-0 object-cover" />
-      <p className="z-40 absolute bottom-[3%] text-[1.2vw] text-[#0E50A8] font-semibold">Điểm hiện tại: 19xxxx</p>
+      <p className="z-40 absolute bottom-[6%] md:bottom-[3%] text-[2.8vw] md:text-[1.2vw] text-[#0E50A8] font-semibold">Điểm hiện tại: 19xxxx</p>
 
       {/* vong quay */}
-      <div className="relative z-30 mt-[1.5%] w-[32.81%] aspect-630/657 bg-cover bg-center bg-no-repeat overflow-hidden flex flex-col items-center
+      <div className="relative z-30 mt-[1.5%] w-[54.3%] md:w-[32.81%] aspect-630/657 bg-cover bg-center bg-no-repeat overflow-hidden flex flex-col items-center
       bg-[url('/images/section2_vong-quay.webp')]">
         <div className="absolute top-[9%] w-[75.56%] aspect-square bg-cover bg-center bg-no-repeat overflow-hidden
         bg-[url('/images/section2_spin-effect.webp')] flex items-center justify-center">

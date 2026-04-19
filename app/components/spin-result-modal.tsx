@@ -32,7 +32,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
         >
           <div className="absolute inset-0 bg-black/70" />
           {result === 1 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[32.4%] aspect-622/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-1-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[32.4%] aspect-622/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-1-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -46,7 +46,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
           </motion.div>}
 
           {result === 2 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-2-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-2-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -58,7 +58,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
           </motion.div>}
 
           {result === 3 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[30.78%] aspect-591/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-3-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[30.78%] aspect-591/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-3-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -72,7 +72,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
           </motion.div>}
 
           {result === 4 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-4-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-4-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -84,7 +84,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
           </motion.div>}
 
           {result === 5 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[30.78%] aspect-591/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-5-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[30.78%] aspect-591/526 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-5-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -98,7 +98,7 @@ const SpinResultModal = ({ result, onClose }: SpinResultModalProps) => {
           </motion.div>}
 
           {result === 6 && <motion.div
-            className="relative z-10 flex flex-col items-center w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-4-bg.webp')]"
+            className="relative z-10 flex flex-col items-center w-full md:w-[30.78%] aspect-591/299 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_reward-4-bg.webp')]"
             initial={{ scale: 0.7, opacity: 0, y: 40 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 40 }}

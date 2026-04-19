@@ -9,19 +9,20 @@ const Section5 = () => {
   const [showNoticeModal, setShowNoticeModal] = useState(false);
   
   return (
-    <section className="relative w-full aspect-750/1334 md:aspect-1920/960 bg-cover bg-center bg-no-repeat overflow-hidden
-    bg-[url('/images/section2_mb-bg.webp')] md:bg-[url('/images/section5_pc-bg.webp')] flex flex-col items-center">
-      <img src="/images/section5_title.webp" alt="" className="mt-[1.5%] w-[58.23%] object-contain" />
-      <img src="/images/section5_sub-text.webp" alt="" className="-mt-[7%] w-[40.1%] object-contain" />
-      <div className="w-[40.99%] aspect-787/535 bg-cover bg-center bg-no-repeat overflow-hidden
-      bg-[url('/images/section5_pannel.webp')] flex flex-col items-center">
-        <div className="relative mt-[12%] w-[76.88%] aspect-605/400 flex flex-col overflow-hidden">
+    <section className="relative w-full aspect-768/557 md:aspect-1920/960 bg-cover bg-center bg-no-repeat overflow-hidden
+    bg-[url('/images/section5_mb-bg.webp')] md:bg-[url('/images/section5_pc-bg.webp')] flex flex-col items-center">
+      <img src="/images/section5_pc-title.webp" alt="" className="hidden md:block mt-[1.5%] w-[58.23%] object-contain" />
+      <img src="/images/section5_mb-title.webp" alt="" className="md:hidden -mt-[2%] w-[85.68%] object-contain" />
+      <img src="/images/section5_sub-text.webp" alt="" className="-mt-[15%] md:-mt-[7%] w-[58.98%] md:w-[40.1%] object-contain" />
+      <div className="w-[73.18%] md:w-[40.99%] aspect-562/341 md:aspect-787/535 bg-cover bg-center bg-no-repeat overflow-hidden
+      bg-[url('/images/section5_mb-pannel.webp')] md:bg-[url('/images/section5_pc-pannel.webp')] flex flex-col items-center">
+        <div className="relative mt-[8%] md:mt-[12%] w-[88%] md:w-[76.88%] aspect-478/263 md:aspect-605/400 flex flex-col overflow-hidden">
           {/* Table header */}
           <div className="flex shrink-0">
             {["STT", "Mốc Nạp", "Vật Phẩm Được Tặng"].map((col, i) => (
               <div
                 key={i}
-                className={`py-[1.5%] text-center text-[1.2vw] font-bold text-[#112D7D] ${
+                className={`py-[1.5%] text-center text-[2.4vw] md:text-[1.2vw] font-bold text-[#112D7D] ${
                   i === 0 ? "w-[15%]" : i === 1 ? "w-[35%]" : "flex-1"
                 }`}
               >
@@ -31,7 +32,7 @@ const Section5 = () => {
           </div>
 
           {/* Scrollable rows */}
-          <div className="flex-1 min-h-0 overflow-y-auto text-[#1053A9] text-[0.8vw] font-semibold">
+          <div className="flex-1 min-h-0 overflow-y-auto text-[#1053A9] text-[2.2vw] md:text-[0.8vw] font-semibold">
             {[
               { stt: 1, moc: "129.000" },
               { stt: 2, moc: "229.000" },
@@ -50,8 +51,8 @@ const Section5 = () => {
           </div>
           
         </div>
-        <img src="/images/section5_btn-join.webp" alt="" className="z-10 absolute bottom-[33%] right-[24.5%] w-[5.99%] object-contain img-btn" onClick={() => setShowParticipationModal(true)} />
-        <img src="/images/section5_btn-notice.webp" alt="" className="z-10 absolute bottom-[20%] right-[25.5%] w-[5.05%] object-contain img-btn" onClick={() => setShowNoticeModal(true)} />
+        <img src="/images/section5_btn-join.webp" alt="" className="z-10 absolute bottom-[30%] md:bottom-[33%] right-[4.5%] md:right-[24.5%] w-[10.4%] md:w-[5.99%] object-contain img-btn" onClick={() => setShowParticipationModal(true)} />
+        <img src="/images/section5_btn-notice.webp" alt="" className="z-10 absolute bottom-[14%] md:bottom-[20%] right-[6.5%] md:right-[25.5%] w-[8.72%] md:w-[5.05%] object-contain img-btn" onClick={() => setShowNoticeModal(true)} />
       </div>
 
       {showParticipationModal && <ParticipationModal

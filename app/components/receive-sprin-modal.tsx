@@ -60,7 +60,7 @@ const ReceiveSpinModal = ({ type, onClose }: ReceiveTypeModalProps) => {
       >
         <div className="absolute inset-0 bg-black/70" />
         <motion.div
-          className="relative z-10 flex flex-col items-center w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_receive-spin-bg.webp')]"
+          className="relative z-10 flex flex-col items-center w-full md:w-[41.46%] aspect-796/876 bg-cover bg-center bg-no-repeat overflow-hidden bg-[url('/images/section2_receive-spin-bg.webp')]"
           initial={{ scale: 0.7, opacity: 0, y: 40 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.7, opacity: 0, y: 40 }}
@@ -71,7 +71,7 @@ const ReceiveSpinModal = ({ type, onClose }: ReceiveTypeModalProps) => {
             {/* Tabs */}
             <div className="flex shrink-0">
               <button
-                className={`flex-1 py-[2%] text-[1vw] font-bold leading-tight transition-colors ${
+                className={`flex-1 py-[2%] text-[2.4vw] md:text-[1vw] font-bold leading-tight transition-colors ${
                   activeTab === "login"
                     ? "bg-[#D85C07] text-[#FAECE7]"
                     : "bg-[#5D8899] text-white"
@@ -81,7 +81,7 @@ const ReceiveSpinModal = ({ type, onClose }: ReceiveTypeModalProps) => {
                 Đăng nhập
               </button>
               <button
-                className={`flex-1 py-[2%] text-[1vw] font-bold leading-tight transition-colors ${
+                className={`flex-1 py-[2%] text-[2.4vw] md:text-[1vw] font-bold leading-tight transition-colors ${
                   activeTab === "payment"
                     ? "bg-[#D85C07] text-[#FAECE7]"
                     : "bg-[#5D8899] text-white"
@@ -91,7 +91,7 @@ const ReceiveSpinModal = ({ type, onClose }: ReceiveTypeModalProps) => {
                 Nạp
               </button>
               <button
-                className={`flex-1 py-[2%] text-[1vw] font-bold leading-tight transition-colors ${
+                className={`flex-1 py-[2%] text-[2.4vw] md:text-[1vw] font-bold leading-tight transition-colors ${
                   activeTab === "share"
                     ? "bg-[#D85C07] text-[#FAECE7]"
                     : "bg-[#5D8899] text-white"
@@ -104,16 +104,16 @@ const ReceiveSpinModal = ({ type, onClose }: ReceiveTypeModalProps) => {
 
             {/* Table header */}
             <div className="mt-[3%] flex shrink-0 border border-[#1D5B74] bg-[#5D8898]">
-              <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Mốc</div>
-              <div className="flex-1 py-[1%] text-center text-[0.8vw] font-semibold text-white">Số lượt quay</div>
+              <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white border-r border-[#1D5B74]">Mốc</div>
+              <div className="flex-1 py-[1%] text-center text-[2.2vw] md:text-[0.8vw] font-semibold text-white">Số lượt quay</div>
             </div>
 
             {/* Scrollable rows */}
             <div className="flex-1 min-h-0 overflow-y-auto">
               {rows.map((row, i) => (
                 <div key={i} className="flex border-b border-x border-[#1D5B74] bg-white">
-                  <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black border-r border-[#1D5B74]">{row.milestone}</div>
-                  <div className="flex-1 py-[1.5%] text-center text-[0.8vw] text-black">{row.spins}</div>
+                  <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black border-r border-[#1D5B74]">{row.milestone}</div>
+                  <div className="flex-1 py-[1.5%] text-center text-[2.2vw] md:text-[0.8vw] text-black">{row.spins}</div>
                 </div>
               ))}
             </div>
