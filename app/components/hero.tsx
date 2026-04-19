@@ -38,7 +38,7 @@ const Hero = () => {
       {isClient && !isMobile && (
         <motion.video
           className="absolute top-0 left-0 w-full aspect-1920/1080 object-cover"
-          src="/videos/pc-hero-vid.mp4"
+          src="/videos/pc-hero-vid.webm"
           autoPlay
           loop
           muted
@@ -55,7 +55,7 @@ const Hero = () => {
       {isClient && isMobile && (
         <motion.video
           className="absolute top-0 left-0 w-full aspect-640/1136 object-cover"
-          src="/videos/mb-hero-vid.mp4"
+          src="/videos/mb-hero-vid.webm"
           autoPlay
           loop
           muted
@@ -85,6 +85,7 @@ const Hero = () => {
       <img src="/images/logo-mb-tien-nghich.webp" alt="" className="md:hidden absolute top-[2%] left-[2.5%] w-[19.68%] object-contain" />
       <img src="/images/hero_mb-title.webp" alt="" className="md:hidden absolute bottom-[3%] w-[87.5%] object-contain" />
       <img src="/images/hero_mb-effect.webp" alt="" className="md:hidden absolute bottom-0 w-full object-cover" />
+      <img src="/images/hero-mb-cloud-effect.webp" alt="" className="md:hidden absolute bottom-0 w-full object-cover" />
       <div className="md:hidden z-20 absolute w-[73.18%] bottom-[2%] flex justify-between">
         <img src="/images/hero_btn-vongquay.webp" alt="" className="w-[26.18%] object-contain img-btn" />
         <img src="/images/hero_btn-xephang.webp" alt="" className="w-[26.18%] object-contain img-btn" />
