@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const TOTAL_PAGES = 10;
@@ -12,13 +13,33 @@ const Section3 = () => {
   return (
     <section className="relative w-full aspect-768/770 md:aspect-1920/1340 bg-cover bg-center bg-no-repeat overflow-hidden
     bg-[url('/images/section3_mb-bg.webp')] md:bg-[url('/images/section3_pc-bg.webp')] flex flex-col items-center">
-      <img src="/images/section3_pc-title.webp" alt="" className="hidden md:block mt-[6%] w-[58.23%] object-contain" />
-      <img src="/images/section3_mb-title.webp" alt="" className="md:hidden -mt-[2%] w-[85.68%] object-contain" />
+      <motion.img
+        src="/images/section3_pc-title.webp" alt=""
+        className="hidden md:block mt-[6%] w-[58.23%] object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
+      <motion.img
+        src="/images/section3_mb-title.webp" alt=""
+        className="md:hidden -mt-[2%] w-[85.68%] object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
       <img src="/images/section3_character.webp" alt="" className="hidden md:block absolute bottom-0 left-0 w-[42.66%] object-contain" />
       <img src="/images/section3_effect.webp" alt="" className="hidden md:block absolute bottom-0 left-0 w-full object-contain" />
 
-      <div className="z-10 absolute top-[23%] md:top-[30%] md:left-[28%] w-[96.75%] md:w-[54.69%] aspect-743/390 md:aspect-1050/550 bg-cover bg-center bg-no-repeat overflow-hidden
-      bg-[url('/images/section3_pannel.webp')]">
+      <motion.div
+        className="z-10 absolute top-[23%] md:top-[30%] md:left-[28%] w-[96.75%] md:w-[54.69%] aspect-743/390 md:aspect-1050/550 bg-cover bg-center bg-no-repeat overflow-hidden
+        bg-[url('/images/section3_pannel.webp')]"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+      >
         <div className="absolute top-[10%] right-[10%] w-[75.14%] aspect-789/453 flex flex-col overflow-hidden">
           {/* Table header */}
           <div className="flex shrink-0">
@@ -63,9 +84,15 @@ const Section3 = () => {
             })}
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="absolute w-[79.43%] md:w-[48.44%] aspect-930/204 bottom-[5%] md:bottom-[10%] md:left-[25%] flex flex-col justify-between">
+      <motion.div
+        className="absolute w-[79.43%] md:w-[48.44%] aspect-930/204 bottom-[5%] md:bottom-[10%] md:left-[25%] flex flex-col justify-between"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
+      >
         <div className="relative flex flex-col">
           {/* Labels row — flex-1 per column so widths are equal */}
           <div className="flex mb-[1%]">
@@ -88,7 +115,13 @@ const Section3 = () => {
           <div className="relative w-full h-[2.2vw] md:h-[1.3vw]">
             {/* Bar track */}
             <div className="absolute inset-0 rounded-full bg-[#E1FCFF] border-[0.2vw] border-[#BEEEFF] shadow-inner overflow-hidden">
-              <div className="absolute left-0 top-0 h-full w-[90%] rounded-full bg-linear-to-r from-[#E8A800] via-[#FFD700] to-[#FFE566]" />
+              <motion.div
+                className="absolute left-0 top-0 h-full rounded-full bg-linear-to-r from-[#E8A800] via-[#FFD700] to-[#FFE566]"
+                initial={{ width: "0%" }}
+                whileInView={{ width: "90%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.4, delay: 0.5, ease: "easeOut" }}
+              />
             </div>
             {/* Milestone images */}
             <div className="absolute inset-0 flex items-center">
@@ -108,18 +141,25 @@ const Section3 = () => {
         {/* Chest images — flex-1 per column, same widths → guaranteed alignment */}
         <div className="flex">
           {milestones.map((_, i) => (
-            <div key={i} className="flex-1 flex justify-center">
+            <motion.div
+              key={i}
+              className="flex-1 flex justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + i * 0.1, ease: "easeOut" }}
+            >
               <img
                 src="/images/section3_chest.webp"
                 alt=""
-                className={`w-[55%] object-contain transition-transform ${
-                  i === activeMilestone ? "scale-110" : ""
+                className={`w-[55%] object-contain ${
+                  i === activeMilestone ? "animate-bounce-soft" : "transition-transform"
                 }`}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

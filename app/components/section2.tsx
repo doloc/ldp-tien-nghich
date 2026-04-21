@@ -61,8 +61,22 @@ const Section2 = () => {
   return (
     <section className="relative w-full aspect-768/780 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat overflow-hidden
     bg-[url('/images/section2_mb-bg.webp')] md:bg-[url('/images/section2_pc-bg.webp')] flex flex-col items-center">
-      <img src="/images/section2_pc-title.webp" alt="" className="hidden md:block w-[64.43%] object-contain" />
-      <img src="/images/section2_mb-title.webp" alt="" className="md:hidden w-full object-contain" />
+      <motion.img
+        src="/images/section2_pc-title.webp" alt=""
+        className="hidden md:block w-[64.43%] object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
+      <motion.img
+        src="/images/section2_mb-title.webp" alt=""
+        className="md:hidden w-full object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
       <div className="-mt-[11.5%] md:-mt-[5.5%] w-[46.22%] md:w-[28.96%] flex justify-between">
         <img src="/images/section2_btn-history.webp" alt="" className="w-[28.23%] object-contain img-btn" onClick={() => setShowHistoryModal(true)} />
         <img src="/images/section2_btn-receive-ticket.webp" alt="" className="w-[38.67%] object-contain img-btn" onClick={() => setShowReceiveModal(true)} />
@@ -106,7 +120,7 @@ const Section2 = () => {
         <img
           src="/images/section2_btn-spin.webp"
           alt=""
-          className={`absolute bottom-[8%] w-[52.54%] object-contain img-btn transition-opacity ${isSpinning ? "opacity-50 pointer-events-none" : "opacity-100"}`}
+          className={`absolute bottom-[8%] w-[52.54%] object-contain img-btn transition-opacity ${isSpinning ? "opacity-50 pointer-events-none" : "opacity-100 animate-pulse-glow"}`}
           onClick={handleSpin}
         />
       </div>

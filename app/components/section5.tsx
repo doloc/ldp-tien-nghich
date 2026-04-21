@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import ParticipationModal from "./participation-modal";
 import NoticeModal from "./notice-modal";
@@ -11,11 +12,38 @@ const Section5 = () => {
   return (
     <section className="relative w-full aspect-768/557 md:aspect-1920/960 bg-cover bg-center bg-no-repeat overflow-hidden
     bg-[url('/images/section5_mb-bg.webp')] md:bg-[url('/images/section5_pc-bg.webp')] flex flex-col items-center">
-      <img src="/images/section5_pc-title.webp" alt="" className="hidden md:block mt-[1.5%] w-[58.23%] object-contain" />
-      <img src="/images/section5_mb-title.webp" alt="" className="md:hidden -mt-[2%] w-[85.68%] object-contain" />
-      <img src="/images/section5_sub-text.webp" alt="" className="-mt-[15%] md:-mt-[7%] w-[58.98%] md:w-[40.1%] object-contain" />
-      <div className="w-[73.18%] md:w-[40.99%] aspect-562/341 md:aspect-787/535 bg-cover bg-center bg-no-repeat overflow-hidden
-      bg-[url('/images/section5_mb-pannel.webp')] md:bg-[url('/images/section5_pc-pannel.webp')] flex flex-col items-center">
+      <motion.img
+        src="/images/section5_pc-title.webp" alt=""
+        className="hidden md:block mt-[1.5%] w-[58.23%] object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
+      <motion.img
+        src="/images/section5_mb-title.webp" alt=""
+        className="md:hidden -mt-[2%] w-[85.68%] object-contain"
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      />
+      <motion.img
+        src="/images/section5_sub-text.webp" alt=""
+        className="-mt-[15%] md:-mt-[7%] w-[58.98%] md:w-[40.1%] object-contain"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      />
+      <motion.div
+        className="w-[73.18%] md:w-[40.99%] aspect-562/341 md:aspect-787/535 bg-cover bg-center bg-no-repeat overflow-hidden
+        bg-[url('/images/section5_mb-pannel.webp')] md:bg-[url('/images/section5_pc-pannel.webp')] flex flex-col items-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+      >
         <div className="relative mt-[8%] md:mt-[12%] w-[88%] md:w-[76.88%] aspect-478/263 md:aspect-605/400 flex flex-col overflow-hidden">
           {/* Table header */}
           <div className="flex shrink-0">
@@ -53,7 +81,7 @@ const Section5 = () => {
         </div>
         <img src="/images/section5_btn-join.webp" alt="" className="z-10 absolute bottom-[30%] md:bottom-[33%] right-[4.5%] md:right-[24.5%] w-[10.4%] md:w-[5.99%] object-contain img-btn" onClick={() => setShowParticipationModal(true)} />
         <img src="/images/section5_btn-notice.webp" alt="" className="z-10 absolute bottom-[14%] md:bottom-[20%] right-[6.5%] md:right-[25.5%] w-[8.72%] md:w-[5.05%] object-contain img-btn" onClick={() => setShowNoticeModal(true)} />
-      </div>
+      </motion.div>
 
       {showParticipationModal && <ParticipationModal
         onClose={() => setShowParticipationModal(false)}
