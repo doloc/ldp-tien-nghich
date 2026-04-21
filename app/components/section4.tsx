@@ -1,21 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import RuleModalGratitude from "./rule-modal-gratitude";
 
 const TOTAL_PAGES = 6;
 
 const Section4 = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [showRuleModal, setShowRuleModal] = useState(false);
+
   return (
     <section className="relative w-full aspect-768/620 md:aspect-1920/900 bg-cover bg-center bg-no-repeat overflow-hidden
     bg-[url('/images/section4_mb-bg.webp')] md:bg-[url('/images/section4_pc-bg.webp')] flex flex-col items-center">
       <img src="/images/section4_pc-title.webp" alt="" className="hidden md:block mt-[1%] w-[58.23%] object-contain" />
       <img src="/images/section4_mb-title.webp" alt="" className="md:hidden -mt-[3.5%] w-[85.68%] object-contain" />
+      <img src="/images/section2_btn-rule.webp" alt="" className="-mt-[12%] md:-mt-[6.5%] w-[13.02%] md:w-[8.18%] object-contain img-btn" onClick={() => setShowRuleModal(true)} />
       <img src="/images/section4_character.webp" alt="" className="hidden md:block z-10 absolute bottom-0 right-[9%] w-[36.30%] object-contain" />
       <img src="/images/section4_effect.webp" alt="" className="hidden md:block z-20 absolute bottom-0 left-0 w-full object-contain" />
 
       {/* PC */}
-      <img src="/images/section4_sub-text.webp" alt="" className="hidden md:block relative -mt-[4.5%] w-[37.60%] object-contain" />
+      <img src="/images/section4_sub-text.webp" alt="" className="hidden md:block relative mt-[1.5%] w-[37.60%] object-contain" />
       <div className="hidden md:flex z-20 relative w-[40.99%] aspect-787/512 bg-cover bg-center bg-no-repeat overflow-hidden
       bg-[url('/images/section4_pannel.webp')] flex-col items-center">
         <div className="mt-[9%] w-[74.97%] aspect-590/397 flex flex-col overflow-hidden">
@@ -111,6 +115,10 @@ const Section4 = () => {
             })}
           </div>
         </div>
+
+      {showRuleModal && <RuleModalGratitude
+        onClose={() => setShowRuleModal(false)}
+      />}
     </section>
   );
 };
